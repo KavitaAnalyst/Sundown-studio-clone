@@ -1,0 +1,980 @@
+@import url(https://db.onlinewebfonts.com/c/cddfddeff0f66d9f03e9df2585ea819e?family=NeueHaasDisplay-Roman);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body , html{
+    
+    height:100%;
+    width:100%;
+    font-family: NeueHaasDisplay-Roman;
+    background-color: #efeae3;
+}
+
+#loader{
+    height:100%;
+    width:100%;
+    background-color:black;
+    position:fixed;
+    z-index:999;
+    top:0;
+    transition:all ease 0.5s;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#loader h1 {
+  font-size: 9vw;
+  color:transparent;
+  background:linear-gradient(to right , orange,orangered);
+  -webkit-background-clip: text;
+  position:absolute;
+  opacity: 0;
+  animation-name:loadText;
+  animation-duration:1s;
+  animation-delay:1s;
+  animation-timing-function: linear;
+}
+
+#loader h1:nth-child(1) {
+    animation-delay: 1s;
+   
+   }
+   #loader h1:nth-child(2) {
+    animation-delay: 2s;
+   
+   }
+  #loader h1:nth-child(3) {
+    animation-delay: 3s;
+   
+   }
+
+  @keyframes loadText {
+    0%{ 
+        opacity:0;
+    }
+ 
+     5%{
+        opacity: 1;
+     }
+
+     90%{
+        opacity:1;
+     }
+
+    100%{
+   opacity:0;
+    }
+  }
+@media (max-width:600px) {
+
+  #loader{
+   align-items: center;
+       
+
+}
+
+    #loader h1 {
+        font-size:13vw;
+        position:absolute;
+        margin-top:-190px;
+        margin-right:100px;
+       
+      }
+      
+}
+
+
+#page-1{
+    min-height:100vh;
+    background-color: #efeae3;
+    width:100%;
+    position: relative;
+    padding:0 2vw;
+}
+#nav{
+    padding:30px 40px;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    position:relative;
+       z-index: 100;
+       overflow: hidden;
+}
+
+#nav-right{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    gap:20px;
+}
+#nav-left img {
+  width:100%;
+  height:100%;    
+}
+#menuItem {
+    display:none;}
+#nav h3{
+    display: none;
+}
+#nav-right a{
+    text-decoration: none;
+    color: rgb(61, 56, 56);
+    z-index: 9;
+    position: relative;
+}
+
+#nav-right h4{
+    font-size: 18px;
+    border: 1px solid rgb(196, 186, 186);
+    padding:13px 30px;
+    border-radius: 30px;
+    font-family: NeueHaasDisplay-Roman, sans-serif;
+    font-weight: 500;
+    transition: all ease 0.4s;
+    position: relative;
+    overflow: hidden; 
+}
+
+#nav-right h4::after{
+    content:"" ;
+    position:absolute;
+    height:100%;
+    width:100%;
+    background-color: black;
+    left:0;
+    bottom:-100%;
+    border-radius:  50%;
+    transition:all ease 0.5s;
+}
+
+#nav-right h4:hover::after{
+    bottom:0;
+    border-radius:0;
+}
+
+#nav-right h4:hover a{
+color: #fff;
+}
+/*Header content */
+
+#header{
+    margin-top: 90px;
+    height:80vh;
+    width:100%;
+    display: flex;
+    align-items:flex-end;
+    justify-content: space-between;
+    padding:2.5vw;
+    border-bottom:2px solid #000000;
+    
+
+}
+#header-left h3{
+    width:30vw;
+    font-size:30px;
+    font-family: NeueHaasDisplay-Roman;
+    
+}
+
+#header h1{
+    font-weight: 900;
+    font-size:10vw;
+    font-family: NeueHaasDisplay-Roman;
+    line-height:12vw;
+    text-align: right;
+}
+
+#page-1 video{
+position:relative;
+ width:100%;
+ border-radius: 30px;
+ margin-top: 5vw;
+    
+}
+
+#hero-shape{
+    margin-top: 190px;
+    position: absolute;
+    width:46vw;
+    height:36vw;
+   
+    /*border-radius: 70%;*/
+   
+    right:0;
+    top:70vh;
+   /* filter: blur(20px);*/
+}
+#hero1{
+    background-color: orangered;
+    height:100%;
+    width:100%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius:50%;
+    filter: blur(20px);
+    position: absolute;
+}
+
+#hero2{
+    background:linear-gradient(#FE320A,#fe570a);
+    height:30vw;
+    width:30vw;
+    border-radius: 50%;
+    filter: blur(10px);
+    position:absolute;
+    animation-name:anime2;
+    animation-duration:5s;
+    animation-timing-function: linear;
+    animation-direction:alternate;
+    animation-iteration-count:infinite;
+}
+
+
+#hero3{
+    background:linear-gradient(#FE320A,#fe570a);
+    height:30vw;
+    width:30vw;
+    border-radius: 50%;
+    filter: blur(10px);
+    position:absolute;
+    animation-name:anime1;
+    animation-duration:5s;
+    animation-timing-function: linear;
+    animation-direction:alternate;
+    animation-iteration-count:infinite;
+}
+
+@keyframes anime1 {
+    from{
+        transform: translate(55%, -2%);}
+
+    to{
+        transform: translate(0%, 10%);
+    }
+}
+
+@keyframes anime2 {
+    from{
+        transform: translate(5%, -5%);}
+
+    to{
+        transform: translate(-20%, 20%);
+    }
+}
+
+#page2{
+    background-color: #efeae3;
+    min-height: 100vh;
+    width:100%;
+    position:relative;
+    
+}
+#moving-text {
+    margin-top:80px;
+    white-space: nowrap;
+    overflow-x:auto;
+}
+#moving-text::-webkit-scrollbar{
+    display: none;
+}
+.contents{
+    
+    white-space:nowrap;
+    display: inline-block;
+    animation-name:moveText;
+    animation-duration:13s;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+}
+
+
+
+#moving-text h1{
+    text-transform: uppercase;
+    font-size:9vw;
+    font-family: NeueHaasDisplay-Roman;
+    display: inline-block;
+    
+}
+
+#circle{
+    width:30px;
+    height:30px;
+    border-radius: 20px;
+    background-color:#FE320A ;
+    display: inline-block;
+    margin: 1vw 1vw;
+}
+
+@keyframes moveText {
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+        transform:translateX(-100%);
+    }
+}
+
+#page2-bottom{
+    height:80vh;
+    width:100%;
+    margin-top:14vw;
+    padding: 6vw;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    font-family: NeueHaasDisplay-Roman;
+    position: relative;
+    z-index:1;
+}
+
+#page2-bottom h1{
+    font-size:70px;
+    font-weight:bolder;
+    width:60%;
+}
+
+    #bottom-part2{
+        width:25%;
+       
+    }
+
+    #bottom-part2 img {
+    width:100%;
+    border-radius:15px; 
+    
+    }
+
+    #bottom-part2 p{
+        margin-top:3vw;  
+        line-height:1.8vw;
+    }
+#page2 #moving-ball{
+    height:40vw;
+    width: 40vw;
+    background:linear-gradient(to top right,#FE320A,#de8a24);
+    position:absolute;
+    border-radius:50%;
+    top:40%;
+    left:25%;
+    filter:blur(20px);
+    animation-name:movingBall;
+    animation-duration:6s;
+    animation-timing-function:ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes movingBall {
+    from{
+        transform: translate(10%, -10%) skew(0);
+    }
+
+    to{
+        transform: translate(-10%,10%) skew(-9deg);
+    }
+}
+#page3{
+    background-color: #efeae3;
+    margin-top: 80px;
+    min-height:100vh;
+    width:100%;
+    padding:4vw;
+    
+}
+
+
+.elem{
+height:150px;
+width:100%;
+position: relative;
+font-family: NeueHaasDisplay-Roman;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0px 2vw;
+border-bottom:1px solid black;
+
+overflow: hidden;
+}
+
+.elem h2{
+    font-size:2.5vw;
+    position:relative;
+    z-index:9;
+}
+
+.overlay{
+    height:100%;
+    width:100%;
+    background-color:#fe570a;
+    position: absolute;
+    left:0;
+    top:-100%;
+    transition:all ease 0.3s;
+    
+}
+
+.elem:hover .overlay{
+    top:0;
+}
+.elem-container{
+    background-color: #FE320A;
+}
+#fixed-image{
+    height:25vw;
+    width: 22vw;
+    
+    border-radius: 10px;
+    position:fixed;
+    z-index:99;
+    left:50%;
+    top:25%;
+    display: none;
+    background-size: cover;
+    background-position: center;
+}
+.text{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    margin-bottom: 40px;
+}
+.text p{
+    font-family: NeueHaasDisplay-Roman;
+    font-size: 13px;
+}
+#circle1{
+    height:15px;
+    width:15px;
+    border-radius:50%;
+    background-color: #fe570a;
+}
+.right-text{
+    font-family: NeueHaasDisplay-Roman;
+
+}
+.right-text h4,h5{
+    font-weight: 500;
+    font-size:15px;
+    text-align: right;
+    color:#757070;
+    position:relative;
+    z-index:9;
+
+}
+.right-text h4,h5:hover{
+    color:#000000;
+}
+
+
+
+
+
+
+#page4{
+    height:100vh;
+    width:100%;
+   
+   
+    
+   
+    font-family: NeueHaasDisplay-Roman;
+    
+    
+    padding: 0 4vw;
+}
+#page4-content{
+    height:100vh;
+    width:100%;
+    display: flex;
+    background-color: #efeae3;
+    justify-content:center;
+    border:2px solid black;
+    border-radius:10px;
+}
+
+#page4 #left{
+    width:50%;
+    padding:90px 70px;
+    text-align:left;
+    background-color:black;
+    color:white;
+  
+}
+#page4 #left h1{
+    font-size: 90px;
+    font-weight: 900;
+    border-left:1px solid black;
+}
+#page4 #right{
+    width:70%;
+    background-color: #876a64;
+  
+}
+
+#page4 #right img{
+    width:100%;
+    height:100vh;
+}
+
+#page5{
+    height:80vh;
+    width:100%;
+    background-color: #efeae3;
+    padding: 10vw 2vw;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    height: 100%;
+    text-align: center;
+    font-size: 18px;
+    border-left:1px solid black;
+    padding: 1vw 2vw;
+    
+  }
+  .swiper-slide  p{
+    line-height: 1.4vw;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width:70%;
+    height:70%;
+    object-fit: cover;
+  }
+
+  .swiper-slide {
+    width: 20%;
+  }
+
+
+#page6 {
+    height:80vh;
+    width:100%;
+    background-color: #000000;
+ color:#b6afa9;
+    
+}
+
+#footer{
+ position:fixed;
+ height:100vh;
+ width:100%;
+ 
+ 
+}
+#btheading{
+    border-bottom:2px solid #fff;
+    padding:10px;
+}
+
+#footer h1{
+    font-size: 20vw;
+    font-family: NeueHaasDisplay-Roman;
+}
+
+
+  #full-screen{
+    height:100vh;
+    width:100%;
+    background-color: #bba4a46b;
+    position:fixed;
+    z-index:99;
+    top:-100%;
+    transition:all ease 0.5s;
+
+}
+
+#full1{
+    height:50%;
+    width:100%;
+    background-color:#EFEAE3;
+    border-bottom-left-radius: 20PX;
+    border-bottom-right-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Media query*/
+
+  @media (max-width:600px) {
+    #page-1{
+        min-height:100vh;
+       width:100vw;
+       padding:0 0vw;
+    }
+    #nav{
+       padding: 8vw 5vw;
+       background-color:#EFEAE3;
+       
+       
+    }
+    
+    #nav-right{
+        display:none;
+       
+    }
+    #nav-left img {
+      height:10vh;   
+      transition: all ease 0.2s; 
+    }
+    
+    #nav h3{
+        display:block;
+        padding:3vw 5vw;
+        border:1px solid rgb(196, 174, 174);
+        border-radius:40px;
+        font-size:7vw;
+        font-weight: 200;
+        
+
+    }
+
+    #menuItem h3{
+        color: #000000;
+
+    }
+    #menuItem h3 a{
+        text-decoration: none;
+        color: #000000;
+    }
+
+
+#header{
+    margin-top: 90px;
+    height:62vh;
+    width:100%;
+    
+    display: flex;
+    align-items:flex-end;
+    justify-content: space-between;
+    padding: 7vw 5vw;
+    padding-bottom:10vw;
+    border-bottom:2px solid #000000;
+    flex-direction: column-reverse;
+    position:relative;
+    z-index: 9;
+    
+    
+
+}
+#header-left h3{
+    width:80%;
+    font-size:5.5vw;
+    font-family: NeueHaasDisplay-Roman;
+    line-height:6vw;
+    
+}
+
+#header h1{
+    
+    font-size:16vw;
+    font-family: NeueHaasDisplay-Roman;
+    line-height:15vw;
+    text-align: right;
+}
+
+#page-1 video{
+position:relative;
+height:70vh;
+object-fit: cover;
+object-position: center;
+ width:92%;
+ margin-left: 4%;
+ border-radius: 30px;
+ margin-top: 5vw;
+    
+}
+
+#page2{
+    background-color: #efeae3;
+    min-height: 100vh;
+    width:100%;
+    position:relative;
+    
+}
+#moving-text {
+    margin-top:80px;
+    white-space: nowrap;
+    overflow-x:auto;
+}
+#moving-text::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+#moving-text h1{
+    text-transform: uppercase;
+    font-size:9vw;
+    font-family: NeueHaasDisplay-Roman;
+    display: inline-block;
+    
+}
+
+#circle{
+    width:15px;
+    height:15px;
+    border-radius: 20px;
+    background-color:#FE320A ;
+    display: inline-block;
+    margin: 1vw 1vw;
+}
+
+
+#page2-bottom{
+    height:80vh;
+    width:100%;
+    margin-top:14vw;
+    padding: 10vw;
+    display: flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    font-family: NeueHaasDisplay-Roman;
+    position: relative;
+    flex-direction: column;
+    z-index:9;
+}
+
+#page2-bottom h1{
+    font-size:11vw;
+    font-weight:900;
+    width:100%;
+    line-height:9vw;
+}
+
+    #bottom-part2{
+        width:90%;
+        border-radius: 10px;
+       
+    }
+
+    #bottom-part2 img {
+    padding:9vw 0vw;
+    width:100%;
+    border-radius:15px; 
+    padding: 10vw 0;;
+    
+    }
+
+    #bottom-part2 p{
+        font-size:15px;
+        margin-top:3vw;  
+        line-height:5vw;
+        
+        
+    }
+#page2 #moving-ball{
+    height:90vw;
+    width: 90vw;
+    background:linear-gradient(to top right,#FE320A,#de8a24);
+    position:absolute;
+    border-radius:50%;
+    top:40%;
+    left:25%;
+    filter:blur(20px);
+    animation-name:movingBall;
+    animation-duration:6s;
+    animation-timing-function:ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+#page3{
+    background-color: #efeae3;
+    margin-top:80vw;
+    min-height:100vh;
+    width:100%;
+    padding:4vw;
+    
+}
+.elem{
+    height:80px;
+    width:80%;
+    position: relative;
+    font-family: NeueHaasDisplay-Roman;
+    padding: 0px 0vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+    border: none;
+    }
+.elem h2{
+    font-size: 30px;
+}
+
+.text{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    margin-bottom: 40px;
+}
+.text p{
+    font-family: NeueHaasDisplay-Roman;
+    font-size:17px;
+}
+#circle1{
+    height:15px;
+    width:15px;
+    border-radius:50%;
+    background-color: #fe570a;
+}
+.right-text{
+    font-family: NeueHaasDisplay-Roman;
+    padding:4vw;
+
+}
+.right-text h4,h5{
+    
+    font-weight: 500;
+    font-size:13px;
+    text-align:left;
+    color:#757070;
+    
+
+}
+.right-text h4,h5:hover{
+    color:#000000;
+}
+
+#page4{
+    margin-top: 130vw;
+    height:100vh;
+    width:100%;
+    font-family: NeueHaasDisplay-Roman;
+    margin-bottom: 10vw;
+    
+    
+}
+#page4-content{
+    border-radius: 20%;
+    height:100vh;
+    width:100%;
+    display: flex;
+    background-color: #efeae3;
+    flex-direction: column;
+    border:2px solid black;
+  
+}
+
+#page4 #left{
+    width:auto;
+    text-align:left;
+    background-color:black;
+    color:white;
+  
+}
+#page4 #left h1{
+    font-size: 70px;
+    font-weight: 900;
+    border-left:1px solid black;
+}
+#page4 #right{
+    width:100%;
+    background-color: #876a64;
+  
+}
+
+#page4 #right img{
+    width:100%;
+    height:100vh;
+}
+
+#page5{
+    height:60vh;
+    width:100%;
+    background-color: #efeae3;
+    padding: 10vw 2vw;
+}
+
+
+
+#page6 {
+    margin-top:10vw;
+    margin: 0 10px;
+    background-color:black;
+    color: #fff;
+    padding: 2vw 2vx;
+    height:50vh;
+    width:100%;
+    
+    
+}
+#btheading{
+    font-size:8px;
+    color: #fff;
+}
+
+
+
+
+
+
+#page5{
+    margin-top:130vw;
+    height:80vh;
+    width:100%;
+    background-color: #efeae3;
+    padding: 10vw 2vw;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    height: 100%;
+    text-align: center;
+    font-size: 18px;
+    border-left:1px solid black;
+    padding: 1vw 2vw;
+    
+  }
+  .swiper-slide  p{
+    line-height:6vw;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width:70%;
+    height:70%;
+    object-fit: cover;
+  }
+
+  .swiper-slide {
+    width: 70%;
+  }
+
+
+
+};
+
+
